@@ -409,9 +409,7 @@ void CLNF::Read(string main_location)
 		
 			this->hierarchical_mapping.push_back(mappings);
 
-			CLNF part_model(location);
-
-			this->hierarchical_models.push_back(part_model);
+			this->hierarchical_models.emplace_back(location);
 
 			this->hierarchical_model_names.push_back(part_name);
 
